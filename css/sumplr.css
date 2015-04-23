@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,700);
+/*
+ * Base CSS Template for print styles.
+ * Base template for invoice styles for Esfresco.
+ * Designed by Nikhil Nigade for Dezine Zync Studios LLP.
+ * Copyright 2014-2015 Dezine Zync Studios LLP. All Rights Reserved.
+*/
+/* Utilities */
+/* Variables */
+@media print, screen {
+  /* Base Styles : Start */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    word-spacing: 1.1pt;
+    letter-spacing: 0.2pt;
+    font-family: "Oswald", sans-serif;
+    color: #000;
+    background: none;
+    font-size: 12pt;
+  }
+  body.test {
+    width: 595px;
+    height: 841.8px;
+    overflow: scroll;
+    background: #acacac;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
+  }
+  h1 {
+    font-size: 19pt;
+  }
+  h2 {
+    font-size: 17pt;
+  }
+  h3 {
+    font-size: 15pt;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 12pt;
+  }
+  code {
+    font: 10pt Courier, monospace;
+  }
+  blockquote {
+    margin: 1.3em;
+    padding: 1em;
+    font-size: 10pt;
+  }
+  hr {
+    background-color: #ccc;
+  }
+  img {
+    display: block;
+    margin: 1em 0;
+  }
+  a img {
+    border: none;
+  }
+  table {
+    margin: 1px;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  td,
+  th {
+    padding: 0.125in;
+  }
+  th {
+    font-weight: bold;
+  }
+  tfoot {
+    font-style: italic;
+  }
+  caption {
+    background: #fff;
+    margin-bottom: 2em;
+    text-align: left;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+  /* Base Styles : End */
+  /* Common */
+  .taxItem td:nth-child(2) {
+    text-align: right;
+  }
+}
+@media print, screen {
+  body {
+    padding: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+  body strong,
+  body th {
+    color: #555;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title {
+    font-family: "Oswald", sans-serif;
+  }
+  header,
+  .container,
+  footer {
+    margin-top: 0.5in;
+  }
+  header h1.title {
+    font-size: 1rem;
+  }
+  header h1.title::first-line {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  tr {
+    border-bottom: 1px solid #3d4350;
+  }
+  tr:last-child {
+    border-bottom: none;
+  }
+  td strong {
+    color: black;
+  }
+  td:last-child,
+  td:nth-child(3),
+  th:last-child,
+  th:nth-child(3) {
+    text-align: right;
+  }
+  div.container {
+    width: 100%;
+    background-color: #3d4350;
+    display: table;
+    padding: 0 0 0 1.5%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+  div.container::after,
+  div.container:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+  }
+  section.left {
+    float: left;
+    width: 25%;
+    display: table-cell;
+  }
+  section.info {
+    color: #ccc;
+  }
+  section.info h4 {
+    margin-bottom: 0;
+  }
+  section.info p {
+    margin-top: 0;
+  }
+  section.info .to h4,
+  section.info .to b,
+  section.info strong {
+    color: white;
+  }
+  section.info .dates {
+    font-size: 0.75rem;
+  }
+  section.info .dates p:first-child {
+    margin-bottom: 0.5rem;
+  }
+  section.content {
+    width: 75%;
+    display: block;
+    padding: 1.5% 0 1.5% 5%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    background-color: #babec6;
+    overflow: hidden;
+  }
+  section.content table {
+    width: 95%;
+  }
+  footer {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    padding: 1.5%;
+    width: 100%;
+    font-size: 0.75rem;
+    border-top: 1px solid #3d4350;
+  }
+}

@@ -1,0 +1,74 @@
+@import "base";
+
+@media print, screen {
+	
+	body {
+		padding: 2em;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box; 
+	}
+	
+	header {
+		
+		margin-bottom: 0.5in;
+		
+		.title {
+			font-size: 24pt;
+		}
+		
+		.to {
+			float: left;
+		}
+		
+		.from {
+			float: left;
+			margin-left: 1in;
+		}
+		
+		.to, .from {
+			
+			max-width: 2.5in;
+			height: auto;
+			
+			.subtitle {
+				margin-bottom: 0.1in;
+			}
+			
+			p {
+				margin-top: 0.025in;
+			}
+			
+		}
+		
+		.dates {
+			float: right;
+			margin-top: 0.42in;
+			text-align: right;
+		}
+		
+		.clearFix();
+		
+	}
+	
+	.content {
+		
+		table {
+			width: 100%;
+		}
+		
+		th {
+			font-family: @headerFont;
+		}
+		
+		tr {
+			border-bottom: 1px solid #bcbcbc;
+		}
+		
+		td:last-child, td:nth-child(3), th:last-child, th:nth-child(3) {
+			text-align: right;
+		}
+		
+	}
+	
+}

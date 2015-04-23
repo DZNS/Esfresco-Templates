@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*
+ * Base CSS Template for print styles.
+ * Base template for invoice styles for Esfresco.
+ * Designed by Nikhil Nigade for Dezine Zync Studios LLP.
+ * Copyright 2014-2015 Dezine Zync Studios LLP. All Rights Reserved.
+*/
+/* Utilities */
+/* Variables */
+@media print, screen {
+  /* Base Styles : Start */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    word-spacing: 1.1pt;
+    letter-spacing: 0.2pt;
+    font-family: "Lato", sans-serif;
+    color: #000;
+    background: none;
+    font-size: 12pt;
+  }
+  body.test {
+    width: 595px;
+    height: 841.8px;
+    overflow: scroll;
+    background: #acacac;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+  }
+  h1 {
+    font-size: 19pt;
+  }
+  h2 {
+    font-size: 17pt;
+  }
+  h3 {
+    font-size: 15pt;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 12pt;
+  }
+  code {
+    font: 10pt Courier, monospace;
+  }
+  blockquote {
+    margin: 1.3em;
+    padding: 1em;
+    font-size: 10pt;
+  }
+  hr {
+    background-color: #ccc;
+  }
+  img {
+    display: block;
+    margin: 1em 0;
+  }
+  a img {
+    border: none;
+  }
+  table {
+    margin: 1px;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  td,
+  th {
+    padding: 0.125in;
+  }
+  th {
+    font-weight: bold;
+  }
+  tfoot {
+    font-style: italic;
+  }
+  caption {
+    background: #fff;
+    margin-bottom: 2em;
+    text-align: left;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+  /* Base Styles : End */
+  /* Common */
+  .taxItem td:nth-child(2) {
+    text-align: right;
+  }
+}
+@media print, screen {
+  body {
+    padding: 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+  body strong,
+  body th {
+    color: #555;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title {
+    font-family: "Lato", sans-serif;
+  }
+  header {
+    padding-left: 2in;
+  }
+  header .title {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  header p {
+    margin: 0.25rem 0 0;
+    padding: 0;
+  }
+  .left {
+    float: left;
+    clear: right;
+  }
+  .right {
+    float: right;
+  }
+  .info {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #c5ba3b;
+    border-bottom: 1px solid #c5ba3b;
+  }
+  .info::after,
+  .info:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+  }
+  .info strong {
+    color: black;
+  }
+  .info p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+  .info .left {
+    clear: left;
+    width: 2in;
+  }
+  .info .right {
+    float: left;
+  }
+  .to .right p:first-child {
+    margin-bottom: 0.25rem;
+  }
+  table {
+    width: 100%;
+  }
+  tr {
+    border-bottom: 1px solid #c5ba3b;
+  }
+  td:last-child,
+  td:nth-child(3),
+  th:last-child,
+  th:nth-child(3) {
+    text-align: right;
+  }
+}

@@ -1,0 +1,106 @@
+@import "base";
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@bodyFont: "Lato", sans-serif;
+@headerFont: @bodyFont;
+
+@tintColor: saturate(#C0B640, 4);
+
+@media print, screen {
+	
+	body {
+		padding: 2rem;
+		 
+		font-family: @bodyFont;
+		font-weight: 400;
+		
+		.boxed();
+		
+		strong, th {
+			color: #555;
+		}
+		
+	}
+	
+	h1,h2,h3,h4,h5,h6, .title {
+		font-family: @headerFont;
+	}
+	
+	header {
+		
+		padding-left: 2in;
+		
+		.title {
+			font-weight: 300;
+			font-size: 2rem;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		
+		p {
+			margin: 0.25rem 0 0;
+			padding: 0;
+		}
+		
+	}
+	
+	.left {
+		float: left;
+		clear: right;
+	}
+	
+	.right {
+		float: right;
+	}
+	
+	.info {
+		
+		width: 100%;
+		margin: 1.5rem 0;
+		
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		
+		border-top: 1px solid @tintColor;
+		border-bottom: 1px solid @tintColor;
+		
+		.clearFix();
+		
+		strong {
+			color: black;
+		}
+		
+		p {
+			margin: 0 0 1rem 0;
+			padding: 0;
+		}
+		
+		.left {
+			clear: left;
+			width: 2in;
+		}
+		
+		.right {
+			float: left;
+		}
+		
+	}
+	
+	.to .right p:first-child {
+		margin-bottom: 0.25rem;
+	}
+	
+	table {
+		width: 100%;
+	}
+	
+	tr {
+		border-bottom: 1px solid @tintColor;
+	}
+	
+	td:last-child, td:nth-child(3), th:last-child, th:nth-child(3) {
+		text-align: right;
+	}
+	
+}

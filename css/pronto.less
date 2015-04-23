@@ -1,0 +1,116 @@
+@import "base";
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+@bodyFont: "PT Sans", sans-serif;
+@headerFont: "PT Sans Narrow", sans-serif;
+
+@baseColor: #3D4350;
+@itemsColor: #BABEC6;
+@tintColor: #C51048;
+
+@media print, screen {
+	
+	body {
+		padding: 2rem;
+		 
+		font-family: @bodyFont;
+		font-weight: 300;
+		
+		.boxed();
+		
+		strong, th {
+			color: #555;
+		}
+		
+	}
+	
+	h1,h2,h3,h4,h5,h6, .title {
+		font-family: @headerFont;
+	}
+	
+	header {
+		
+		.title {
+			font-size: 0.3in;
+			text-transform: uppercase;
+			line-height: 0.375in;
+			
+			color: lighten(saturate(@tintColor, 10), 15);
+			
+			&:first-line {
+				font-size: 0.5in;
+				letter-spacing: -0.5px;	
+			}
+			
+		}
+		
+	}
+	
+	.to {
+		
+		float: left;
+		
+		h3 {
+			margin-bottom: 0;
+		}
+		
+		p {
+			margin-top: 0.05rem;
+		}
+		
+	}
+	
+	.dates {
+		
+		float: right;
+		margin-top: 2.15rem;
+		
+		p {
+			
+			margin-top: 0.05rem;
+			margin-bottom: 0;
+			
+			&:first-child {
+				margin-top: 0.6rem;
+			}
+			
+		}
+		
+	}
+	
+	.info {
+		
+		.clearFix();
+		
+	}
+	
+	.content {
+		
+		margin-top: 3rem;
+		
+		table {
+		
+			.boxed();
+			width: 100%;
+			padding: 0 1rem;
+			
+			tr {
+				border-bottom: 1px solid saturate(lighten(@tintColor, 15), -10);
+			}
+			
+			td:last-child, td:nth-child(3), th:last-child, th:nth-child(3) {
+				text-align: right;
+			}
+			
+		}
+		
+	}
+	
+	footer {
+		margin-top: 3rem;
+		font-family: @headerFont;
+	}
+	
+}
