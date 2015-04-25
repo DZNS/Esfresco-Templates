@@ -6,8 +6,8 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Dezine Zync Studios LLP.</h1>
-      <p>302, Long St., Central Ave. Pune, India.</p>
+      <h1 class="title">{{userCompany}}</h1>
+      <p>{{userAddress}}</p>
     </header>
     <div class="container">
       <section class="info">
@@ -16,8 +16,8 @@
             <p>To</p>
           </div>
           <div class="right">
-            <p><strong>John Appleseed</strong></p>
-            <p>25, Cleaveland Ave. Pune, India</p>
+            <p><strong>{{clientName}}</strong></p>
+            <p>{{clientAddress}}</p>
           </div>
         </div>
         <div class="dates">
@@ -25,45 +25,39 @@
             <p>Date of Invoice:</p>
           </div>
           <div class="right">
-            <p>25, Jan 2015</p>
+            <p>{{invoiceDate}}</p>
           </div>
           <div class="left">
             <p>Payment due by:</p>
           </div>
           <div class="right">
-            <p>10, Feb 2015</p>
+            <p>{{dueDate}}</p>
           </div>
         </div>
       </section>
       <section class="content">
         <table>
-          <tr>
+          {{tableHeader<tr>
             <th colspan="3">Description</th>
             <th colspan="2">Quantity</th>
             <th colspan="2">Rate</th>
             <th colspan="2">Total</th>
-          </tr>
-          <tr>
-            <td colspan="3">User Interface Engineering</td>
-            <td colspan="2">100 Hr</td>
-            <td colspan="2">300.00</td>
-            <td colspan="2">30000.00</td>
-          </tr>
-          <tr>
-            <td colspan="3">Backend Engineering &amp System Architecture</td>
-            <td colspan="2">60 Hr</td>
-            <td colspan="2">300.00</td>
-            <td colspan="2">18000.00</td>
-          </tr>
-          <tr class="taxItem">
+          </tr>/tableHeader}}
+          {{tableBody<tr>
+            <td colspan="3">{{itemTitle}}</td>
+            <td colspan="2">{{itemQuantity}}</td>
+            <td colspan="2">{{itemRate}}</td>
+            <td colspan="2">{{itemTotal}}</td>
+          </tr>/tableBody}}
+          {{taxItem<tr class="taxItem">
             <td colspan="6"></td>
-            <td colspan="1">Tax A @12%</td>
-            <td colspan="2">3200.00</td>
-          </tr>
-          <tr>
-            <td colspan="1"><strong>Total</strong></td>
-            <td colspan="8"> <strong>₹ 76500.00</strong></td>
-          </tr>
+            <td colspan="1">{{taxTitle}}</td>
+            <td colspan="2">{{taxAmount}}</td>
+          </tr>/taxItem}}
+          {{tableFooter<tr>
+            <td colspan="1"><b>Total</b></td>
+            <td colspan="8"><b>{{total}}</b></td>
+          </tr>/tableFooter}}
         </table>
       </section>
     </div>
