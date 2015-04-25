@@ -1,2 +1,2 @@
 # Esfresco-Templates
-Open source templates to use with Esfresco.
+Open source templates to use with [Esfresco](http://esfres.co/).
